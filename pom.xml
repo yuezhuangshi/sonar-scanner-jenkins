@@ -321,7 +321,17 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin> 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+	        <source>8</source>
+          <failOnError>false</failOnError>
+          <failOnWarn>false</failOnWarn>
+          <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
+      </plugin>  
     </plugins>
   </build>
   <profiles>
